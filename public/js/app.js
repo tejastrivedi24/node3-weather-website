@@ -25,8 +25,8 @@ weatherForm.addEventListener('submit',(e)=>{
 
         else{
             messageOne.textContent=data.location
-            messageTwo.textContent=data.forecast.desc
-            
+            messageTwo.textContent=data.forecast.desc+'. It is currently '+data.forecast.temp+' degrees out and feels like '+data.forecast.feelslike+'. Humidity is '+data.forecast.humidity+'%'
+             
         }
 
     })

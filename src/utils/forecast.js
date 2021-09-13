@@ -19,7 +19,8 @@ const forecast=(address,callback)=>{
         // }
      
         else{
-            callback(undefined,{desc:response.body.current.weather_descriptions[0],temp:response.body.current.temperature,feelslike:response.body.current.feelslike})
+            console.log(response.body.current)
+            callback(undefined,{desc:response.body.current.weather_descriptions[0],temp:response.body.current.temperature,feelslike:response.body.current.feelslike,humidity:response.body.current.humidity})
     
         }
     })

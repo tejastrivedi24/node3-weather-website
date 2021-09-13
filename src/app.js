@@ -3,6 +3,7 @@ const forecast = require('./utils/forecast.js')
 const app =express()
 const path = require('path')
 const hbs = require('hbs')
+const port = process.env.PORT || 3000
 
 app.use(express.static(path.join(__dirname,'../public')))
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -98,6 +99,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000,() => {
-    console.log('server is running on port 3000!')
+app.listen(port,() => {
+    console.log('server is running on port'+port)
 })
